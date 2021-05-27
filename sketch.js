@@ -64,7 +64,7 @@ function setup() {
   block25 = new Block(700,95,30,40);
   
 
-  polygon = new Polygon(100,200,20,20)
+  polygon = new Polygon(150,200,20,20)
   World.add(world,polygon);
   sling_shot = new Slingshot(polygon.body,{x: 150,y: 200});
   
@@ -74,19 +74,21 @@ function draw() {
   background(56,44,44); 
  
   textSize(20);
-  fill("lightyellow");
-  
+  fill("yellow")
+  text("Press 'space' or 'r' to get another chance to shoot!",20,50) 
 
   ground.display();
+
+  fill("yellow")
   stand1.display();
   stand2.display();
   
-  strokeWeight(2);
-  stroke(15);
+  //strokeWeight(2);
+  //stroke(15);
 
 //stand 1
 
-  fill("skyblue");
+  fill("darkblue");
   block1.display();
   block2.display();
   block3.display();
@@ -94,32 +96,32 @@ function draw() {
   block5.display();
   block6.display();
   block7.display();
-  fill("pink");
+  fill("blue");
   block8.display();
   block9.display();
   block10.display();
   block11.display();
   block12.display();
-  fill("turquoise");
+  fill("cyan");
   block13.display();
   block14.display();
   block15.display();
-  fill("grey");
+  fill("white");
   block16.display();
 
 //stand 2
 
-  fill("skyblue");
+  fill("darkblue");
   block17.display();
   block18.display();
   block19.display();
   block20.display();
   block21.display();
-  fill("pink");
+  fill("blue");
   block22.display();
   block23.display();
   block24.display();
-  fill("turquoise");
+  fill("cyan");
   block25.display();
  
   polygon.display();
@@ -144,7 +146,7 @@ function keyPressed(){
   if(keyCode === 82){
     Matter.Body.setPosition(polygon.body,{x: 150,y: 200})
     sling_shot.attach(polygon.body)
-    sling_shot.bodyA 
+    sling_shot.bodyA
   }
 }
 
